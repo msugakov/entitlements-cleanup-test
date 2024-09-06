@@ -1,8 +1,9 @@
 ARG NORMAL_RPM=bzip2
 ARG ENTITLED_RPM=snappy
 
+ARG BASE=ubi9/ubi
 
-FROM registry.access.redhat.com/ubi9/ubi:latest AS pristine
+FROM registry.access.redhat.com/$BASE:latest AS pristine
 
 
 FROM pristine AS registered
